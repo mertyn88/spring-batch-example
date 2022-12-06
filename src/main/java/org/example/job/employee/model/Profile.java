@@ -1,4 +1,4 @@
-package org.example.model;
+package org.example.job.employee.model;
 
 import lombok.Data;
 

@@ -9,10 +9,10 @@ spring:
     console:
       enabled: true
       path: /h2-console
-  #batch:
-  #  job:
-  #    names: ${job.name:NONE}
-  #    enabled: true
+  batch:
+    job:
+      names: ${job.name:NONE}
+      enabled: true
 
 server:
   port: 8080

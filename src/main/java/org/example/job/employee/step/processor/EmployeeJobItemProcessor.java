@@ -1,10 +1,10 @@
-package org.example.processor;
+package org.example.job.employee.step.processor;
 
-import org.example.model.Employee;
-import org.example.model.Profile;
+import org.example.job.employee.model.Employee;
+import org.example.job.employee.model.Profile;
 import org.springframework.batch.item.ItemProcessor;
 
-public class EmployeeItemProcessor implements ItemProcessor<Employee, Profile> {
+public class EmployeeJobItemProcessor implements ItemProcessor<Employee, Profile> {
     @Override
     public Profile process(final Employee emp) throws Exception {
 	String profileName = "";

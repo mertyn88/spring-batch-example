@@ -1,7 +1,8 @@
-package org.example.listener;
+package org.example.job.employee.listener;
 
 import lombok.RequiredArgsConstructor;
-import org.example.model.Profile;
+import org.example.bean.annotation.job.EmployeeJobAno;
+import org.example.job.employee.model.Profile;
 import org.springframework.batch.core.BatchStatus;
 import org.springframework.batch.core.JobExecution;
 import org.springframework.batch.core.JobExecutionListener;
@@ -14,7 +15,8 @@ import java.sql.SQLException;
 import java.util.List;
 @Component
 @RequiredArgsConstructor
-public class EmpJobExecutionListener implements JobExecutionListener {
+@EmployeeJobAno
+public class EmployeeJobListener implements JobExecutionListener {
 	private final JdbcTemplate jdbcTemplate;
 
 	@Override

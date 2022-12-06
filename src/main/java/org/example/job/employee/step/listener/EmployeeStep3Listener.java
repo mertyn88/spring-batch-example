@@ -1,4 +1,4 @@
-package org.example.listener;
+package org.example.job.employee.step.listener;
 
 import org.springframework.batch.core.*;
 import org.springframework.batch.core.scope.context.ChunkContext;
@@ -8,7 +8,7 @@ import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Step3ExecutionListener implements Tasklet, StepExecutionListener {
+public class EmployeeStep3Listener implements Tasklet, StepExecutionListener {
 
     @Override
     public void beforeStep(StepExecution stepExecution) {
