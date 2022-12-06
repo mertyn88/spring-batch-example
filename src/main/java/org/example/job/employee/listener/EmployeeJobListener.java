@@ -1,7 +1,7 @@
 package org.example.job.employee.listener;
 
 import lombok.RequiredArgsConstructor;
-import org.example.bean.annotation.job.EmployeeJobAno;
+import org.example.bean.annotation.job.EmployeeJobAnnotation;
 import org.example.job.employee.model.Profile;
 import org.springframework.batch.core.BatchStatus;
 import org.springframework.batch.core.JobExecution;
@@ -15,7 +15,7 @@ import java.sql.SQLException;
 import java.util.List;
 @Component
 @RequiredArgsConstructor
-@EmployeeJobAno
+@EmployeeJobAnnotation
 public class EmployeeJobListener implements JobExecutionListener {
 	private final JdbcTemplate jdbcTemplate;
 

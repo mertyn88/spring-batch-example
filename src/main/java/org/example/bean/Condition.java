@@ -1,7 +1,7 @@
 package org.example.bean;
 
-import org.example.bean.annotation.job.EmployeeJobAno;
-import org.example.bean.annotation.job.Test1JobAno;
+import org.example.bean.annotation.job.EmployeeJobAnnotation;
+import org.example.bean.annotation.job.Test1JobAnnotation;
 import org.springframework.boot.autoconfigure.condition.AnyNestedCondition;
 
 public class Condition {
@@ -11,7 +11,7 @@ public class Condition {
             super(ConfigurationPhase.PARSE_CONFIGURATION);
         }
 
-        @EmployeeJobAno
+        @EmployeeJobAnnotation
         class EmployeeJobCondition { }
     }
 
@@ -20,10 +20,10 @@ public class Condition {
             super(ConfigurationPhase.PARSE_CONFIGURATION);
         }
 
-        @EmployeeJobAno
+        @EmployeeJobAnnotation
         class EmployeeJobCondition { }
 
-        @Test1JobAno
+        @Test1JobAnnotation
         class Test1JobCondition { }
     }
 }

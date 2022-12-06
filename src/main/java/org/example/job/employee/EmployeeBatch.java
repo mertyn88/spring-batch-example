@@ -1,7 +1,7 @@
 package org.example.job.employee;
 
 import lombok.RequiredArgsConstructor;
-import org.example.bean.annotation.job.EmployeeJobAno;
+import org.example.bean.annotation.job.EmployeeJobAnnotation;
 import org.example.job.employee.listener.EmployeeJobListener;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
@@ -10,7 +10,7 @@ import org.springframework.batch.core.launch.support.RunIdIncrementer;
 import org.springframework.context.annotation.Bean;
 
 @RequiredArgsConstructor
-@EmployeeJobAno
+@EmployeeJobAnnotation
 public class EmployeeBatch {
 
     private final JobBuilderFactory jobBuilderFactory;

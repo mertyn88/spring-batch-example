@@ -35,10 +35,13 @@ dependencies {
     implementation "org.slf4j:slf4j-api:${slf4jVersion}"
     implementation "org.slf4j:slf4j-simple:${slf4jVersion}"
 
-    testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
-    testImplementation "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
-    testImplementation "org.junit.jupiter:junit-jupiter-params:${junitVersion}"
+    //testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
+    //testImplementation "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
+    //testImplementation "org.junit.jupiter:junit-jupiter-params:${junitVersion}"
     testImplementation("org.springframework.boot:spring-boot-starter-test:${springBootVersion}") {
         exclude group: "org.junit.vintage", module: "junit-vintage-engine"
     }
+
+    testImplementation "org.junit.jupiter:junit-jupiter:${junitVersion}"
+    testImplementation 'org.springframework.batch:spring-batch-test:4.3.0'
 }

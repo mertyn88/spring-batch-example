@@ -1,10 +1,10 @@
 package org.example.job.test1.listener;
 
-import org.example.bean.annotation.job.Test1JobAno;
+import org.example.bean.annotation.job.Test1JobAnnotation;
 import org.springframework.batch.core.JobExecution;
 import org.springframework.batch.core.JobExecutionListener;
 
-@Test1JobAno
+@Test1JobAnnotation
 public class Test1JobListener implements JobExecutionListener {
 
 	@Override

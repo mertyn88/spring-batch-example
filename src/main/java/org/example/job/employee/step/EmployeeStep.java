@@ -1,7 +1,7 @@
 package org.example.job.employee.step;
 
 import lombok.RequiredArgsConstructor;
-import org.example.bean.annotation.job.EmployeeJobAno;
+import org.example.bean.annotation.job.EmployeeJobAnnotation;
 import org.example.job.employee.model.Employee;
 import org.example.job.employee.model.Profile;
 import org.example.job.employee.step.listener.EmployeeStep2Listener;
@@ -25,7 +25,7 @@ import javax.sql.DataSource;
 
 // @EnableBatchProcessing
 @RequiredArgsConstructor
-@EmployeeJobAno
+@EmployeeJobAnnotation
 public class EmployeeStep {
 
     private final StepBuilderFactory stepBuilderFactory;

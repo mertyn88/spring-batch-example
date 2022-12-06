@@ -12,5 +12,5 @@ import java.lang.annotation.Target;
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @Component
-@ConditionalOnProperty(value = "job.name", havingValue = "test1Job")
-public @interface Test1JobAno { }
+@ConditionalOnProperty(value = "job.name", havingValue = "employeeJob")
+public @interface EmployeeJobAnnotation { }
