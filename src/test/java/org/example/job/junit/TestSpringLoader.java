@@ -1,4 +1,4 @@
-package org.example;
+package org.example.job.junit;
 
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
@@ -28,7 +28,6 @@ public class TestSpringLoader {
     protected ApplicationContext applicationContext;
     @Autowired
     protected JobLauncherTestUtils jobLauncherTestUtils;
-
     @Autowired
     protected JobBuilderFactory jobBuilderFactory;
 }

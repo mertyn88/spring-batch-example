@@ -11,6 +11,7 @@ buildscript {
 plugins {
     id 'java'
     id 'org.springframework.boot' version "${springBootVersion}"
+    id 'groovy'
 }
 
 repositories {
@@ -42,6 +43,12 @@ dependencies {
         exclude group: "org.junit.vintage", module: "junit-vintage-engine"
     }
 
-    testImplementation "org.junit.jupiter:junit-jupiter:${junitVersion}"
-    testImplementation 'org.springframework.batch:spring-batch-test:4.3.0'
+    //testImplementation "org.junit.jupiter:junit-jupiter:${junitVersion}"
+    testImplementation "org.springframework.batch:spring-batch-test:4.3.0"
+
+    //testImplementation 'org.codehaus.groovy:groovy-all:3.0.8'
+    //testImplementation 'org.spockframework:spock-core:2.0-groovy-3.0'
+
+    testImplementation 'org.spockframework:spock-core:2.3-groovy-4.0'
+    testImplementation 'org.spockframework:spock-spring:2.3-groovy-4.0'
 }

@@ -1,6 +1,7 @@
-package org.example.job.employee;
+package org.example.job.junit.employee;
 
-import org.example.TestSpringLoader;
+import org.example.job.employee.EmployeeBatch;
+import org.example.job.junit.TestSpringLoader;
 import org.example.job.employee.listener.EmployeeJobListener;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -25,7 +26,7 @@ class EmployeeBatchTest extends TestSpringLoader {
     /*
     Mock으로 생성하지 않으면 job.name에 의해 Spring Loading중 해당 Job이 실행
      */
-    @MockBean(name = "employeeJob")
+    @MockBean
     private Job job;
 
     @Autowired

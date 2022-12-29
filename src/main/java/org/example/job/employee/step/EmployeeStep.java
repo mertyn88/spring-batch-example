@@ -45,10 +45,10 @@ public class EmployeeStep {
     }
 
     @Bean
-    public FlatFileItemReader<Employee> reader() {
+    public FlatFileItemReader<Employee> employeeItemReader() {
         System.out.println("===================================> " + new Object(){}.getClass().getEnclosingMethod().getName());
         return new FlatFileItemReaderBuilder<Employee>()
-                .name("employeeItemReader")
+                .name(new Object(){}.getClass().getEnclosingMethod().getName())
                 .resource(new ClassPathResource("employees.csv"))
                 .delimited()
                 .names(new String[]{ "empCode", "empName", "expInYears" })
@@ -60,7 +60,7 @@ public class EmployeeStep {
     }
 
     @Bean
-    public JdbcBatchItemWriter<Profile> writer(DataSource dataSource) {
+    public JdbcBatchItemWriter<Profile> employeeItemWriter(DataSource dataSource) {
         System.out.println("===================================> " + new Object(){}.getClass().getEnclosingMethod().getName());
         return new JdbcBatchItemWriterBuilder<Profile>()
                 .itemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<Profile>())
@@ -70,7 +70,7 @@ public class EmployeeStep {
     }
 
     @Bean
-    public ItemProcessor<Employee, Profile> processor() {
+    public ItemProcessor<Employee, Profile> employeeItemProcessor() {
         System.out.println("===================================> " + new Object(){}.getClass().getEnclosingMethod().getName());
         return new EmployeeJobItemProcessor();
     }
